@@ -6,4 +6,4 @@ from django.shortcuts import get_object_or_404
 
 
 def index(request):
-    return HttpResponse("Welcome to HEREEEEE!")
+    return render(request, 'main/cs/index.html')
