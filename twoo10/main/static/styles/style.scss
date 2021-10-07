@@ -14,3 +14,12 @@ li {
         text-decoration: underline;
     }
 }
+
+.icon {
+    color: gray;
+    font-size: 30px;
+    &:hover {
+        color: black;
+        cursor: pointer;
+    }
+}
