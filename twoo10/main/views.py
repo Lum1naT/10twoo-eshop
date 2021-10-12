@@ -5,5 +5,9 @@ from django.shortcuts import get_object_or_404
 # Create your views here.
 
 
-def index(request):
+def cs_index(request):
     return render(request, 'main/cs/index.html')
+
+
+def cs_account(request):
+    return render(request, 'main/cs/account.html')

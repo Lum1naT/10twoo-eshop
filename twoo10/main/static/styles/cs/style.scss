@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'typewrite';
+    font-display: swap;
+    src: url(./Bohemian-typewriter.ttf) format('truetype');
+}
+
+body {
+    background-color: white;
+    font-family: 'typewrite', sans-serif;
+    letter-spacing: 0px;
+}
+
+li {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.icon {
+    color: gray;
+    font-size: 30px;
+    &:hover {
+        color: black;
+        cursor: pointer;
+    }
+}
+
+.user-account {
+    a {
+        color: grey;
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+            color: black;
+        }
+    }
+    .active {
+        color: black;
+        text-decoration: underline !important;
+    }
+}

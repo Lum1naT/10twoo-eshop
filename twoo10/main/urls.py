@@ -20,5 +20,12 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.index, name="index"),
+    ## /cs Section ##
+    path('', views.cs_index, name="cs_index"),
+    path('cs', views.cs_index, name="cs_index"),
+
+    path('cs/ucet', views.cs_account, name="cs_account"),
+    path('ucet', views.cs_account, name="cs_account"),
+
+    ## End of /cs Section ##
 ]
