@@ -20,12 +20,19 @@ from . import views
 
 
 urlpatterns = [
-    ## /cs Section ##
-    path('', views.cs_index, name="cs_index"),
-    path('cs', views.cs_index, name="cs_index"),
+    ## api interface ##
+    path('api/customer/personal/edit', views.api_edit_customer_personal,
+         name="api_edit_customer_personal"),
 
-    path('cs/ucet', views.cs_account, name="cs_account"),
+    ## ##
+    path('test/', views.test, name="test"),
+
+    ## / Section ##
+    path('', views.cs_index, name="cs_index"),
+
     path('ucet', views.cs_account, name="cs_account"),
 
-    ## End of /cs Section ##
+    path('ucet/adresy', views.cs_account_addresses, name="cs_account_addresses"),
+
+    ## End of / Section ##
 ]

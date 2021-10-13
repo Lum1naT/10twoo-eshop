@@ -1,15 +1,26 @@
 from django.db import models
 from django.db.models.aggregates import Max
+from django.utils.translation import gettext as _
+
 
 # Create your models here.
 
 
 COUTRY_CHOICES = (
-    ('CZ', 'CZECH REPUBLIC'),
-    ('DE', 'GERMANY'),
-    ('AU', 'AUSTRIA'),
-    ('PL', 'POLAND'),
-    ('SK', 'SLOVAK REPUBLIC'),
+    ('CZ', _('Czech Republic')),
+    ('DE', _('Germany')),
+    ('AU', _('Austria')),
+    ('PL', _('Poland')),
+    ('SK', _('Slovak Republic')),
+
+)
+
+
+GENDER_CHOICES = (
+    ('F', _('Female')),
+    ('M', _('Male')),
+    ('U', _('Undefined')),
+
 
 )
 
@@ -18,6 +29,9 @@ class Customer(models.Model):
     name = models.CharField(max_length=100)
     surname = models.CharField(max_length=100)
     email = models.EmailField()
+    date_of_birth = models.DateField()
+    gender = models.CharField(
+        max_length=10, choices=GENDER_CHOICES, default="U")
     account_status = models.IntegerField()
 
     def __str__(self):
@@ -40,8 +54,8 @@ class Item(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField()
     stock = models.IntegerField()
-    price_euro = models.FloatField()
-    price_czk = models.FloatField()
+    price_euro = models.DecimalField(max_digits=10, decimal_places=2)
+    price_czk = models.DecimalField(max_digits=10, decimal_places=2)
 
     def __str__(self):
         return self.name
