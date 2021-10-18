@@ -37,7 +37,7 @@ class Customer(models.Model):
     name = models.CharField(_("Name"), max_length=100,  blank=True, null=True)
     surname = models.CharField(
         _("Surname"), max_length=100,  blank=True, null=True)
-    email = models.EmailField(_("Email"),  blank=True, null=True)
+    email = models.EmailField(_("Email"),  blank=True, null=True, unique=True)
     password = models.CharField(max_length=255, blank=True, null=True)
     phone_regex = RegexValidator(
         regex=r'^\+?1?\d{9,15}$', message="Phone number must be entered in the format: '+12345678915'. Up to 15 digits allowed.")
@@ -72,6 +72,16 @@ class Address(models.Model):
 
     def __str__(self):
         return self.country + ", " + self.adress_line_one + ", " + self.adress_line_two + ", " + self.zip_code
+
+
+class Category(models.Model):
+    name = models.CharField(max_length=255)
+    description = models.TextField(max_length=255)
+
+
+class Tag(models.Model):
+    name = models.CharField(max_length=255)
+    description = models.TextField(max_length=255)
 
 
 class Item(models.Model):

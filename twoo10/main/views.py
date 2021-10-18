@@ -29,9 +29,11 @@ def api_customer_register(request):
         if form.is_valid():
             data = form.cleaned_data
             # register form is valid
-            
-            if(data.get("password") == data.get("password_check")):
-                # passwords match
+            email_already_registered = Customer.objects.filter(
+                email=data.get("email")).count()  # reutrns count of given email already in DB
+
+            if((data.get("password") == data.get("password_check")) and email_already_registered == 0):
+                # passwords match and email is unique
                 new_customer = Customer()
                 new_customer.name = data.get("name")
                 new_customer.surname = data.get("surname")
@@ -40,7 +42,7 @@ def api_customer_register(request):
                 hashed_password = make_password(
                     password)
                 new_customer.password = hashed_password
-                
+
                 # always save
                 new_customer.save()
             else:
