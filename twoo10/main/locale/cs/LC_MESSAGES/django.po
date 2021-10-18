@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-13 07:51+0000\n"
+"POT-Creation-Date: 2021-10-13 14:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,45 +19,189 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n "
 "<= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
 
-#: main/models.py:10
+#: main/admin.py:9
+msgid "Customer"
+msgstr ""
+
+#: main/admin.py:10
+msgid "Customers"
+msgstr ""
+
+#: main/admin.py:16
+msgid "Address"
+msgstr "adresy"
+
+#: main/admin.py:17
+#, fuzzy
+#| msgid "Shipping Addresses"
+msgid "Addresses"
+msgstr "Doručovací Adresy"
+
+#: main/forms.py:9 main/forms.py:22
+msgid "Your name"
+msgstr "Vaše jméno"
+
+#: main/forms.py:11 main/forms.py:24
+msgid "Your surname"
+msgstr "Vaše příjmení"
+
+#: main/forms.py:13 main/forms.py:26 main/forms.py:35
+msgid "Your Email"
+msgstr "Vaše emailová adresa"
+
+#: main/forms.py:15
+msgid "Your date of birth"
+msgstr "Vaše datum narození"
+
+#: main/forms.py:17
+msgid "Your Gender"
+msgstr "Vaše pohlaví"
+
+#: main/forms.py:28 main/forms.py:37
+msgid "Your Password"
+msgstr ""
+
+#: main/forms.py:30
+msgid "Same password"
+msgstr ""
+
+#: main/models.py:14
 msgid "Czech Republic"
 msgstr "Česká Republika"
 
-#: main/models.py:11
+#: main/models.py:15
 msgid "Germany"
 msgstr "Německo"
 
-#: main/models.py:12
+#: main/models.py:16
 msgid "Austria"
 msgstr "Rakousko"
 
-#: main/models.py:13
+#: main/models.py:17
 msgid "Poland"
 msgstr "Polsko"
 
-#: main/models.py:14
+#: main/models.py:18
 msgid "Slovak Republic"
 msgstr "Slovensko"
 
-#: main/models.py:20
+#: main/models.py:24
 msgid "Female"
 msgstr "Žena"
 
-#: main/models.py:21
+#: main/models.py:25
 msgid "Male"
 msgstr "Muž"
 
-#: main/models.py:22
+#: main/models.py:26 main/models.py:32
 msgid "Undefined"
 msgstr "Neuvádět"
 
-#: main/templates/main/account_addresses.html:11
-msgid "Hello World"
-msgstr "Ahoj Světe"
+#: main/models.py:30
+#, fuzzy
+#| msgid "Shipping Addresses"
+msgid "Shipping"
+msgstr "Doručovací Adresy"
 
+#: main/models.py:31
+msgid "Billing"
+msgstr "Fakturační"
+
+#: main/models.py:37
+msgid "Name"
+msgstr "Jméno"
+
+#: main/models.py:38
+#, fuzzy
+#| msgid "Your name"
+msgid "Surname"
+msgstr "Vaše příjmení"
+
+#: main/models.py:39
+#, fuzzy
+#| msgid "Your Email"
+msgid "Email"
+msgstr "Vaše emailová adresa"
+
+#: main/models.py:42
+msgid "Phone number"
+msgstr "Telefonní číslo"
+
+#: main/models.py:45
+#, fuzzy
+#| msgid "Your date of birth"
+msgid "Date of birth"
+msgstr "Vaše datum narození"
+
+#: main/models.py:46
+#, fuzzy
+#| msgid "Your Gender"
+msgid "Gender"
+msgstr "Vaše pohlaví"
+
+#: main/models.py:49
+msgid "Account status"
+msgstr "Status účtu"
+
+#: main/templates/main/account_addresses.html:5
+#: main/templates/main/account_personal.html:5
+msgid "Account"
+msgstr "Účet"
+
+#: main/templates/main/account_addresses.html:7
 #: main/templates/main/account_addresses.html:12
-msgid "How are you doing?"
-msgstr "Jak se vede?"
+msgid "Shipping Addresses"
+msgstr "Doručovací Adresy"
+
+#: main/templates/main/account_addresses.html:18
+#: main/templates/main/account_personal.html:13
+msgid "Personal Information"
+msgstr "Osobní Informace"
+
+#: main/templates/main/account_addresses.html:19
+#: main/templates/main/account_personal.html:19
+msgid "Shipping addresses"
+msgstr "Doručovací adresy"
+
+#: main/templates/main/account_addresses.html:32
+msgid "Current shipping address"
+msgstr "Aktuální doručovací adresa"
+
+#: main/templates/main/account_login.html:5
+#: main/templates/main/account_login.html:18
+#: main/templates/main/account_login.html:30
+msgid "Log in"
+msgstr ""
+
+#: main/templates/main/account_login.html:33
+msgid "Don\\'t have an account? Sign up here!"
+msgstr ""
+
+#: main/templates/main/account_personal.html:7
+#: main/templates/main/account_personal.html:18
+msgid "Personal information"
+msgstr "Osobní informace"
+
+#: main/templates/main/account_register.html:5
+#: main/templates/main/account_register.html:18
+msgid "Register"
+msgstr "Registrace"
+
+#: main/templates/main/account_register.html:41
+msgid "Sign up"
+msgstr "Registrovat"
+
+#: main/templates/main/account_register.html:44
+msgid "Already a member? Log in here!"
+msgstr ""
+
+#, fuzzy
+#~| msgid "Your Gender"
+#~ msgid "Your phone number"
+#~ msgstr "Vaše pohlaví"
+
+#~ msgid "Home"
+#~ msgstr "Hlavní"
 
 #~ msgid "Save"
 #~ msgstr "Uložit"

@@ -21,14 +21,19 @@ from . import views
 
 urlpatterns = [
     ## api interface ##
-    path('api/customer/personal/edit', views.api_edit_customer_personal,
-         name="api_edit_customer_personal"),
+    path('api/customer/personal/edit', views.api_customer_personal_edit,
+         name="api_customer_personal_edit"),
+
+    path('api/customer/register', views.api_customer_register,
+         name="api_customer_register"),
 
     ## ##
     path('test/', views.test, name="test"),
 
     ## / Section ##
     path('', views.cs_index, name="cs_index"),
+    path('registrace', views.cs_account_register, name="cs_account_register"),
+    path('login', views.cs_account_login, name="cs_account_login"),
 
     path('ucet', views.cs_account, name="cs_account"),
 

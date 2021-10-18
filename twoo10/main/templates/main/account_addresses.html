@@ -2,24 +2,34 @@
 {% load i18n %}
 
 {% block title %}
-Domů
+{% trans "Account" %}
+ - 
+{% trans "Shipping Addresses" %}
 {% endblock title %} 
 
 {% block body %}
 <div class="container-sm user-account">
-<h1>Vítej na uživatelské stránce</h1>
-<h2>{% trans "Hello World" %}</h2>
-<h2>{% trans "How are you doing?" %}</h2>
+<h1>{% trans "Shipping Addresses" %}</h1>
+
    <!-- <div class=""></div> --> 
     <div class="row border">
         <div class="col-md-3 border-dark border">
         <nav class="nav sm-flex-column">
-            <a class="nav-link" aria-current="page" href="/ucet">Osobní údaje</a>
-            <a class="nav-link active" href="/ucet/adresy">Doručovací adresy</a>
+            <a class="nav-link" aria-current="page" href="/ucet">{% trans "Personal Information" %}</a>
+            <a class="nav-link active" href="/ucet/adresy">{% trans "Shipping addresses" %}</a>
         </nav>
         </div>
         <div class="col-9">
             <form action="api/customer/personal/edit" method="post" class="row g-3">
+                <div class="col-md-12">
+                    <div class="col-md-3">
+                    +
+                    </div>
+                    <div class="col-md-9">
+                    <table>Table of hell</table>
+                    </div>
+                </div>
+                <h3>{% trans "Current shipping address" %}</h3>
                 <div class="col-md-6">
                   <label for="nameInput" class="form-label">{{ form.name.label }}</label>                      
                                 {{ form.name }}
