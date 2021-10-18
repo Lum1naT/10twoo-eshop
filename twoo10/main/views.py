@@ -31,7 +31,7 @@ def api_customer_register(request):
             # register form is valid
             email_already_registered = Customer.objects.filter(
                 email=data.get("email")).count()  # reutrns count of given email already in DB
-
+            # TODO: password security check
             if((data.get("password") == data.get("password_check")) and email_already_registered == 0):
                 # passwords match and email is unique
                 new_customer = Customer()
