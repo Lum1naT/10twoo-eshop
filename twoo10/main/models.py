@@ -92,6 +92,8 @@ class Item(models.Model):
     price_czk = models.DecimalField(max_digits=10, decimal_places=2)
     last_updated = AutoDateTimeField(default=timezone.now, editable=False)
     created_at = models.DateField(default=timezone.now, editable=False)
+    category = models.ManyToManyField(Category) # todo? maybe make a foreing key once we figure out what to do on_delete
+    tags = models.ManyToManyField(Tag)
 
     def __str__(self):
         return self.name
