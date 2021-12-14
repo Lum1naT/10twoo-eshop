@@ -130,9 +130,8 @@ SECURE_SSL_REDIRECT = False
 
 LANGUAGE_CODE = 'cs'
 
-PYTHONIOENCODING = "UTF-8"
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Amsterdam'
 
 USE_I18N = True
 
