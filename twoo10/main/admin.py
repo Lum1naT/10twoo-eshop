@@ -10,8 +10,3 @@ class CustomerAdmin(admin.ModelAdmin):
         verbose_name_plural = _("Customers")
 
 
-@admin.register(Address)
-class AddressAdmin(admin.ModelAdmin):
-    class Meta:
-        verbose_name = _("Address")
-        verbose_name_plural = _("Addresses")
